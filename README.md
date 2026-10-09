@@ -12,6 +12,44 @@ Farmers often sell their products through several intermediaries before the prod
 
 
 
+\## Objective
+
+The objective of this project is to develop a web application where:
+
+\- farmers can create product listings with price, available quantity and location,
+
+\- consumers can browse and search these listings and place orders directly,
+
+\- stock is updated automatically after each order,
+
+\- farmers can follow and update the status of incoming orders.
+
+Payment will be cash on delivery in the first version; the platform will only record the order and the payment method.
+
+\## Target Users
+
+\- \*\*Farmers:\*\* small and medium-sized producers who want to sell their products directly and set their own prices.
+
+\- \*\*Consumers:\*\* individuals who want to buy fresh agricultural products directly from producers.
+
+\## Planned Technologies
+
+\- \*\*Backend:\*\* ASP.NET Core Web API (C#)
+
+\- \*\*Frontend:\*\* React with TypeScript
+
+\- \*\*Database:\*\* a relational database (e.g. SQL Server or PostgreSQL) with Entity Framework Core
+
+\- \*\*Version control:\*\* Git and GitHub
+
+These choices may change as the project develops.
+
+\## Out of Scope (First Version)
+
+Online payment, delivery tracking, a mobile application and AI-based price prediction are not included in the first version. They are planned as future work.
+
+
+
 \## Current Status
 
 Week 1 – Project definition and research.
