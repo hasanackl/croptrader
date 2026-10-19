@@ -26,18 +26,28 @@ Full requirements, non-functional requirements and user stories: [docs/requireme
 
 **Not included in the first version:** online payment, delivery and cargo tracking, price negotiation or bidding, a mobile application and AI-based price prediction. These are planned as future work.
 
+## Architecture
+CropTrader is a three-layer web application: a React single-page frontend in the browser, an ASP.NET Core Web API on the server (controllers, authentication with JWT, business services with Entity Framework Core) and a SQL Server database that only the API can reach.
+
+![CropTrader architecture](docs/design/architecture.png)
+
+Data model, API endpoints and design decisions: [component interfaces](docs/design/component-interfaces.md) · [design decisions](docs/design/design-decisions.md)
+
 ## Planned Technologies
 - **Backend:** ASP.NET Core Web API (C#)
 - **Frontend:** React with TypeScript
-- **Database:** a relational database (e.g. SQL Server or PostgreSQL) with Entity Framework Core
+- **Database:** Microsoft SQL Server (LocalDB in development) with Entity Framework Core
 - **Version control:** Git and GitHub
 
-These choices may change as the project develops.
+The reasons for these choices are recorded in [docs/design/design-decisions.md](docs/design/design-decisions.md).
 
 ## Current Status
-Week 2 – Requirements and planning. Functional and non-functional requirements, user stories and the development plan are defined. Work is tracked with GitHub Issues.
+Week 3 – Architecture and technical design. The architecture, the data model, the planned API endpoints and the main technology decisions are documented. Next step (Week 4): first working prototype with registration, login, creating a listing and searching listings.
 
 ## Documentation
 - [Project description](docs/project-description.md)
 - [Requirements](docs/requirements.md)
 - [References](docs/references.md)
+- [Design decisions](docs/design/design-decisions.md)
+- [Component interfaces and API endpoints](docs/design/component-interfaces.md)
+- [Week 3 progress](docs/weekly-progress/week03.md)

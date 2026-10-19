@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="architecture" name="Figure 3.1 Architecture">
+    <mxGraphModel dx="1414" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zb" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 5;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=8;spacingTop=4;fontStyle=1;fontSize=14;fillColor=#f3f8ff;strokeColor=#4a78c2;fontColor=#4a78c2;" value="User&#39;s device (web browser)" vertex="1">
+          <mxGeometry height="560" width="270" x="160" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 5;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=8;spacingTop=4;fontStyle=1;fontSize=14;fillColor=#f4fbf2;strokeColor=#4c9a3f;fontColor=#4c9a3f;" value="Application server (ASP.NET Core)" vertex="1">
+          <mxGeometry height="560" width="540" x="500" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zd" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 5;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=8;spacingTop=4;fontStyle=1;fontSize=14;fillColor=#fff8ee;strokeColor=#c98a2b;fontColor=#c98a2b;" value="Database server" vertex="1">
+          <mxGeometry height="560" width="280" x="1090" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tb" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#dd2222;strokeWidth=3;dashed=1;dashPattern=10 6;fontColor=#dd2222;fontStyle=1;fontSize=14;labelBackgroundColor=#ffffff;" value="Trust boundary">
+          <mxGeometry relative="1" x="0.88" as="geometry">
+            <mxPoint x="465" y="70" as="sourcePoint" />
+            <mxPoint x="465" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="farmer" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=2;fontStyle=1;fontSize=14;" value="Farmer" vertex="1">
+          <mxGeometry height="90" width="30" x="55" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=2;fontStyle=1;fontSize=14;" value="Consumer" vertex="1">
+          <mxGeometry height="90" width="30" x="55" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="react" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;strokeWidth=2;fontSize=13;fillColor=#dae8fc;" value="&lt;b&gt;React frontend&lt;/b&gt;&lt;br&gt;(TypeScript SPA)" vertex="1">
+          <mxGeometry height="110" width="210" x="190" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;strokeWidth=2;fontSize=13;fillColor=#d5e8d4;" value="&lt;b&gt;Web API controllers&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;/api/auth &amp;nbsp;/api/listings&lt;br&gt;/api/orders&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="530" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;strokeWidth=2;fontSize=13;fillColor=#d5e8d4;" value="&lt;b&gt;Auth module&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;JWT, password hashing&lt;/font&gt;" vertex="1">
+          <mxGeometry height="95" width="210" x="530" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="svc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;strokeWidth=2;fontSize=13;fillColor=#d5e8d4;verticalAlign=top;spacingTop=12;" value="&lt;b&gt;Business services&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;ListingService&lt;br&gt;OrderService&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="190" x="820" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="ef" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=13;" value="&lt;b&gt;EF Core&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="835" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;strokeWidth=2;fillColor=#ffe6cc;fontSize=13;" value="&lt;b&gt;Relational DB&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Users, Listings, Orders&lt;/font&gt;" vertex="1">
+          <mxGeometry height="174" width="180" x="1140" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="farmer" style="endArrow=block;endFill=1;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;rounded=0;exitX=1;exitY=0.6;entryX=0;entryY=0.25;" target="react" value="① user actions&lt;br&gt;(forms, search)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a1b" edge="1" parent="1" source="consumer" style="endArrow=block;endFill=1;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;rounded=0;exitX=1;exitY=0.4;entryX=0;entryY=0.75;" target="react" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="react" style="endArrow=block;endFill=1;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;rounded=0;exitX=1;exitY=0.27;entryX=0;entryY=0.27;verticalAlign=bottom;" target="ctrl" value="② HTTPS REST request&lt;br&gt;(JSON + JWT)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="ctrl" style="endArrow=block;endFill=1;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;rounded=0;exitX=0;exitY=0.77;entryX=1;entryY=0.77;verticalAlign=top;" target="react" value="③ JSON response&lt;br&gt;+ status code">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="ctrl" style="endArrow=block;endFill=1;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;rounded=0;exitX=0.33;exitY=0;entryX=0.33;entryY=1;" target="auth" value="④ credentials /&lt;br&gt;token to check">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-55" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="auth" style="endArrow=block;endFill=1;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;rounded=0;exitX=0.67;exitY=1;entryX=0.67;entryY=0;" target="ctrl" value="⑤ JWT issued /&lt;br&gt;allow or 401/403">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="ctrl" style="endArrow=block;endFill=1;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.43;" target="svc" value="⑥ validated&lt;br&gt;request data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" edge="1" parent="1" source="svc" style="endArrow=block;endFill=1;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;rounded=0;exitX=1;exitY=0.3;entryX=0;entryY=0.33;verticalAlign=bottom;" target="db" value="⑦ SQL queries +&lt;br&gt;transactions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" edge="1" parent="1" source="db" style="endArrow=block;endFill=1;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;rounded=0;exitX=0;exitY=0.7;entryX=1;entryY=0.73;verticalAlign=top;" target="svc" value="⑧ stored rows /&lt;br&gt;result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" edge="1" parent="1" source="auth" style="endArrow=block;endFill=1;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.37;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="db" value="⑨ read user + password hash">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
